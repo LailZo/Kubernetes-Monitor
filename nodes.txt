@@ -1,0 +1,14 @@
+------------------- Docker commands
+ooen docker desktop
+docker build -t lailazo/monitor:latest .
+docker run --name monitor -d -p 5050:5000 lailazo/monitor:latest
+docker logs monitor -f
+docker rm --force monitor
+docker login -u 
+docker push 
+
+------------------- Kubernetes commands
+kubectl apply -f monitor.yaml
+kubectl get pods 
+kubectl get svc
+

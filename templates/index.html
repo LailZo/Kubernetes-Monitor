@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Information</title>
+</head>
+<body>
+    <h1>Server Information</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>CPU</th>
+                <th>Memory</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for server_name, server_info in all_server_info.items() %}
+            <tr>
+                <td>{{ server_info.name }}</td>
+                <td>{{ server_info.cpu }}</td>
+                <td>{{ server_info.memory }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

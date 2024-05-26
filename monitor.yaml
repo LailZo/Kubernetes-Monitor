@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: monitor
+  name: monitor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitor
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: monitor
+    spec:
+      containers:
+        - image: lailazo/monitor:v10
+          name: monitor
